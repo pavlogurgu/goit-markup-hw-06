@@ -18,7 +18,7 @@
   --accent-color-portfolio: rgba(33, 150, 243, 0.9);
   --overlay: rgba(0, 0, 0, 0.2);
   --our-work-cover: rgba(47, 48, 58, 0.8);
-  
+  --modal-button-send-accent: #188CE8;
 }
 li {
   list-style-type: none;
@@ -32,11 +32,7 @@ img {
 .link {
   text-decoration: none;
   font-style: normal;
-  
-  
 }
-
-
 
 .logo-link {
   text-decoration: none;
@@ -159,64 +155,6 @@ header .container {
   border: 0;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-.modal {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
-  background: var(--main-background);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  transition: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.backdrop.is-hidden > .modal {
-  transform: translate(-50%, -50%) scale(0.9);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: color, background-color;
-}
-.model > .backdrop.is-hidden {
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translate(-50%, -50%) scale(0.9);
-}
-.close-btn {
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  background: var(--main-background);
 }
 
 .section {
@@ -424,7 +362,6 @@ header .container {
 .soc-link-footer:hover,
 .soc-link-footer:focus {
   background-color: var(--accent-color);
- 
 }
 .button:focus,
 .button:hover {
@@ -670,19 +607,14 @@ header .container {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: box-shadow;
-
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-
-  
-} 
+}
 .portfolio-item {
 }
-
-
 
 .portfolio-item:hover .portfolio-image-cover {
   transform: translateY(0);
@@ -805,4 +737,179 @@ header .container {
   margin-right: 70px;
 }
 .footer-two {
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background: var(--main-background);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 40px;
+}
+.backdrop.is-hidden > .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, background-color;
+}
+.modal > .backdrop.is-hidden {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-50%, -50%) scale(0.9);
+}
+.close-btn {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background: var(--main-background);
+}
+
+.close-btn:hover, .close-btn:focus{
+fill: var(--accent-color);
+}
+
+
+.modal-form {
+}
+
+.modal-title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-name);
+  margin-bottom: 12px;
+}
+
+.modal-input {
+  height: 40px;
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.modal-input-title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+
+  letter-spacing: 0.01em;
+  color: var(--title-text);
+  padding-bottom: 4px;
+}
+
+.modal-input-comment {
+  height: 120px;
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  left: 0;
+  top: 0;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  resize: none;
+
+  padding: 12px 16px 12px 16px;
+}
+.modal-input-comment::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-confirm {
+  display: block;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  letter-spacing: 0.03em;
+  color: var(--title-text);
+  text-align: center;
+}
+
+.modal-confirm-text {
+  margin-bottom: 30px;
+}
+
+.modal-lic-terms {
+}
+
+.modal-button-send {
+  background: var(--accent-color);
+
+  border-radius: 4px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  /* identical to box height, or 188% */
+  display: block;
+  letter-spacing: 0.06em;
+  color: var(--white-text);
+  height: 50px;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: box-shadow;
+  border: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.modal-button-send:hover,
+.modal-button-send:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background: var(--modal-button-send-accent);
 }
