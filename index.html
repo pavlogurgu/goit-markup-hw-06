@@ -429,16 +429,45 @@
       </button>
       <p class="modal-title">Залиште свої данні, ми вам зателефонуємо</p>
       <form action="" class="modal-form">
+        
+        <div class="input-wrap">
         <label class="modal-input-title">Ім'я
-        <input type="text" placeholder="" name="client-name" class="modal-input"></label>
+        <input type="text" placeholder="" name="client-name" class="modal-input">
+
+        <svg class="input-icon" width="18px" height="18px">
+        <use href="./images/icons/symbol-defs.svg#backdrop-person"></use>
+        </svg>
+        </label>
+        </div>
+
+        <div class="input-wrap">
         <label class="modal-input-title">Телефон
-        <input type="tel" placeholder="" name="client-tel" class="modal-input"></label>
+        <input type="tel" placeholder="" name="client-tel" class="modal-input">
+        
+        <svg class="input-icon" width="18px" height="18px">
+        <use href="./images/icons/symbol-defs.svg#backdrop-phone"></use>
+        </svg>
+        </label>
+        </div>
+
+        <div class="input-wrap">
         <label class="modal-input-title">Пошта
-        <input type="email" placeholder="" name="client-email" class="modal-input"></label>
+        <input type="email" placeholder="" name="client-email" class="modal-input">
+        
+        <svg class="input-icon" width="18px" height="18px">
+          <use href="./images/icons/symbol-defs.svg#backdrop-email"></use>
+        </svg>
+        </label>
+        </div>
+
+        <div class="input-wrap">
         <label class="modal-input-title">Коментар
-        <textarea type="text" placeholder="Введіть текст" name="client-comment" class="modal-input-comment"></textarea></label>
-        <label class="modal-confirm">
-        <input type="checkbox" class="modal-confirm-text">Погоджуюсь із розсилкою та приймаю <a href="" class="modal-lic-terms">Умови договору</a></input></label>
+        <textarea type="text" placeholder="Введіть текст" name="client-comment" class="modal-input-comment"></textarea>
+      </label>  
+      </div>
+
+        <label class="modal-confirm"></label>
+        <input type="checkbox" class="modal-confirm-text">Погоджуюсь із розсилкою та приймаю <a href="" class="modal-lic-terms">Умови договору</a></input>
         <button class="modal-button-send">Відправити</button>
      
       </form>
