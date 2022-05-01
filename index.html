@@ -417,6 +417,22 @@
   
         </ul>
       </div>
+      <div class="footer-three">
+        <ul class="subscribe-footer">
+          <li class="footer-subscribe">
+            <strong class="strong-footer">Підпишіться на розсилку</strong>
+          </li>
+          <li class="footer-subscribe">
+            <input type="email" placeholder="E-mail" name="client-email" class="footer-email">
+          
+            <button type="button" class="subscribe-btn">Підписатись
+              <svg width="24" height="24" class="footer-send">
+                <use href="./images/icons/symbol-defs.svg#footer-send"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
       </div>
       </div>
     </footer>
@@ -466,10 +482,14 @@
       </label>  
       </div>
 
-        <label class="modal-confirm"></label>
-        <input type="checkbox" class="modal-confirm-text">Погоджуюсь із розсилкою та приймаю <a href="" class="modal-lic-terms">Умови договору</a></input>
+      <div class="input-wrap-confirm">
+        
+        <input type="checkbox" class="modal-confirm visually-hidden" id="modal-confirm" name="confirm">
+        <label class="modal-confirm-text" for="modal-confirm">Погоджуюсь із розсилкою та приймаю <a href="" class="modal-lic-terms">Умови договору</a></label>
+        
+      </div>
         <button class="modal-button-send">Відправити</button>
-     
+      
       </form>
     </div>
       </div>
