@@ -763,6 +763,7 @@ header .container {
   line-height: 20px;
   padding-left: 16px;
   display: block;
+  color: var(--white-text);
 }
 .footer-send{
   fill: var(--white-text);
@@ -903,7 +904,7 @@ header .container {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-  position: relative;
+ 
   cursor: pointer;
   fill: var(--title-name);
   transition-duration: 250ms;
@@ -922,6 +923,7 @@ header .container {
   letter-spacing: 0.01em;
   color: var(--title-text);
   cursor: pointer;
+  position: relative;
 }
 
 .modal-input-comment {
@@ -930,7 +932,7 @@ header .container {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-  margin-bottom: 20px;
+  
   left: 0;
   top: 0;
   font-family: "Roboto";
@@ -951,6 +953,17 @@ header .container {
 }
 
 .modal-lic-terms {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--accent-color);
+  text-decoration: underline;
 }
 
 .modal-button-send {
@@ -982,21 +995,30 @@ header .container {
 .modal-button-send:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background: var(--modal-button-send-accent);
+ 
 }
 
 .input-wrap {
-  position: relative;
+ 
   margin-bottom: 10px;
+}
+
+
+.input-wrap-comment {
+  position: relative;
+  margin-bottom: 30px;
 }
 
 .input-icon {
   position: absolute;
-  top: 50%;
+  
   left: 12px;
   cursor: pointer;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: fill;
+  
+  top: 60%;
 }
 
 .modal-input:focus,
@@ -1041,6 +1063,14 @@ header .container {
 
 .modal-confirm {
   margin-bottom: 30px;
+}
+
+.modal-confirm:focus + .modal-confirm-text::before{
+  background-color: var(--accent-color);
+  border: transparent;
+  background-image: url(../images/backdrop-check.svg);
+  background-position: center;
+  background-size: contain;
 }
 
 .modal-confirm:checked + .modal-confirm-text::before {
