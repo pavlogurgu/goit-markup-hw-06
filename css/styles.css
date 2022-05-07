@@ -925,8 +925,14 @@ header .container {
   position: relative;
 
   display: block;
-
-  margin-bottom: 10px;
+  
+  
+}
+.modal-input-title + .modal-input-title {
+  margin-top: 10px;
+}
+.modal-input-comment-title{
+  margin-bottom: 20px;
 }
 
 .input-wrap {
@@ -1006,7 +1012,7 @@ header .container {
 
 .input-wrap-comment {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .input-icon {
